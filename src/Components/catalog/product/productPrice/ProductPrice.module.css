@@ -1,0 +1,7 @@
+.productPrice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    font-size: 14px;
+}

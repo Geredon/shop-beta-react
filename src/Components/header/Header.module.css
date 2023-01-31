@@ -1,0 +1,61 @@
+
+/* -----------universal start------------ */
+:root {
+    --orange: #E97F03;
+    --black: #000;
+    --size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--size);
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--black);
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+/* -----------universal end------------ */
+
+/* --------header start--------- */
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 24px;
+    align-items: center;
+}
+
+/* --------------Header end----------------- */
+
+
+
+
+/*--------------Media start----------------*/
+
+@media screen and (max-width: 525px) {
+
+    .mainHeader {
+        height: 72px;
+    }
+
+    .searchField {
+        max-width: 200px;
+    }
+
+    .inputSearch {
+        width: 115px;
+    }
+}
+
+/*--------------Media end----------------*/

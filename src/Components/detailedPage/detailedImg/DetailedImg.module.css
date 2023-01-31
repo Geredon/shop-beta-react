@@ -1,0 +1,19 @@
+
+.detailedProductImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 300px;
+    width: 100%;
+    height: 300px;
+    border: 1px solid #F2F2F2;
+}
+
+@media screen and (max-width: 850px) {
+    .detailedProductImg {
+        height: 200px;
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        margin-bottom: 16px;
+    }
+}
+

@@ -1,0 +1,7 @@
+
+@media screen and (max-width: 525px) {
+
+    .cartFavorite {
+        order: -1;
+    }
+}

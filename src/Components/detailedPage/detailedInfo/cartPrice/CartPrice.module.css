@@ -1,0 +1,13 @@
+.cartPrice {
+    font-size: 36px;
+    line-height: 42px;
+    color: var(--orange);
+}
+
+@media screen and (max-width: 525px) {
+
+
+    .cartPrice {
+        order: -1;
+    }
+}
