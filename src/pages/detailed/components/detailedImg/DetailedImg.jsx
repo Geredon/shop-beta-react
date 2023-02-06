@@ -1,9 +1,9 @@
 import style from "./DetailedImg.module.css"
-import {mainUrl} from "../../../../constants/constants";
+import {MAIN_URL} from "../../../../constants/constants";
 
 
 const DetailedImg = (props) => {
-    let path = `${mainUrl}${props.picture?.path}`
+    let path = `${MAIN_URL}${props.picture?.path}`
     let altImg = props.picture?.alt
 
     return (
@@ -14,5 +14,3 @@ const DetailedImg = (props) => {
 };
 
 export default DetailedImg;
-
-//optional chaining

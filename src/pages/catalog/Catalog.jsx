@@ -21,7 +21,7 @@ const Catalog = (props) => {
         return item.name.toLowerCase().includes(props.value.toLowerCase())
     })
 
-    let productsElements = filterCatalog.map(content => <Product name={content.name} img={content.picture}
+    const productsElements = filterCatalog.map(content => <Product name={content.name} img={content.picture}
                                                                  id={content.id} key={content.id} price={content.price}
                                                                  like={content.like}/>)
     return (

@@ -6,7 +6,7 @@ import ProductPrice from "./productPrice/ProductPrice";
 import { NavLink} from "react-router-dom";
 
 const Product = (props) => {
-    let pathId =`detailedPage?id=${props.id}`
+    let pathId =`/detailed/:id=${props.id}`
     return (
         <li className={style.product}>
             <NavLink to={pathId}>

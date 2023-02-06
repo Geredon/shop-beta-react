@@ -3,19 +3,19 @@ import DetailedInfo from "./components/detailedInfo/DetailedInfo";
 import style from "./Detailed.module.css"
 import {detailedData} from "../../api/api";
 import {useEffect, useState} from "react";
+import {useParams} from "react-router-dom";
 
 
 const Detailed = () => {
-
-    let url = new URL(window.location.href);
+    const id = useParams()
 
     const [detailed, setDetailed] = useState([]);
 
     useEffect(() => {
-        detailedData(url.searchParams.get("id")).then((data) => {
+        detailedData(id).then((data) => {
             setDetailed(data);
         })
-    }, []);
+    }, [id]);
 
     return (
         <div className={style.detailedWrapper}>
