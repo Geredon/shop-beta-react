@@ -9,14 +9,12 @@
     cursor: pointer;
 }
 
-.cart-btn-add > button:hover {
+.cartBtnAdd > button:hover {
     background: #E99330;
 }
 
-@media screen and (max-width: 525px)
-{
-    .cartBtnAdd
-    {
+@media screen and (max-width: 525px) {
+    .cartBtnAdd {
         order: 4;
     }
 }

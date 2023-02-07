@@ -4,16 +4,23 @@
     height: 40px;
     gap: 16px;
 }
-
-@media screen and (max-width: 850px) {
+.cartFavorite > .productFavorite  {
+    margin: 0;
+}
+@media screen and (max-width: 915px) {
     .detailedInfo {
         padding: 0 24px;
     }
 }
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 585px) {
 
     .cartInfo {
         flex-wrap: wrap;
         justify-content: space-between;
     }
+    .cartFavorite {
+        order: -1;
+    }
 }
+
+

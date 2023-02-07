@@ -1,13 +1,11 @@
-
 import style from "./CartBtnAdd.module.css"
 
 const CartBtnAdd = () => {
-    return(
+    return (
         <div className={style.cartBtnAdd}>
             <button>Add to cart</button>
         </div>
     )
 };
-
 export default CartBtnAdd;
 

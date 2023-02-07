@@ -7,9 +7,9 @@ import {useParams} from "react-router-dom";
 
 
 const Detailed = () => {
-    const id = useParams()
-
     const [detailed, setDetailed] = useState([]);
+
+    const {id} = useParams()
 
     useEffect(() => {
         detailedData(id).then((data) => {
@@ -25,3 +25,4 @@ const Detailed = () => {
     )
 }
 export default Detailed;
+

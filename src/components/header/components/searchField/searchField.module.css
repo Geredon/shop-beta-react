@@ -28,13 +28,6 @@ input::placeholder {
 }
 
 
-.headerInput{
-    position: relative;
-    bottom: 3px;
-}
-
-
-
 @media screen and (max-width: 525px) {
     .searchField {
         max-width: 10px;

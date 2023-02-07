@@ -2,12 +2,13 @@ import style from "./Catalog.module.css"
 import Product from "./components/product/Product";
 import {useEffect, useState} from "react";
 import {catalogData} from "../../api/api";
+import {useSelector} from "react-redux";
 
 
-const Catalog = (props) => {
-
-
+const Catalog = () => {
+    const value = useSelector(state => state.common.setSearchValue)
     const [catalog, setCatalog] = useState([]);
+
 
 
     useEffect(() => {
@@ -18,7 +19,7 @@ const Catalog = (props) => {
 
 
     const filterCatalog = catalog.filter(item => {
-        return item.name.toLowerCase().includes(props.value.toLowerCase())
+        return item.name.toLowerCase().includes(value.toLowerCase())
     })
 
     const productsElements = filterCatalog.map(content => <Product name={content.name} img={content.picture}

@@ -1,13 +1,17 @@
-import  {ADD_NOTIFICATION} from "../common/actions";
+import  {ADD_ERROR_MESSAGE} from "./actions";
+import  {SEARCH_VALUE} from "./actions";
 
 
 const defaultState = {
-    errorMessageText: null,
+    errorMessage: null,
+    setSearchValue: "",
 }
 export const common = (state = defaultState, action) => {
     switch (action.type) {
-        case ADD_NOTIFICATION:
-            return {...state,  errorMessageText: action.payload}
+        case ADD_ERROR_MESSAGE:
+            return {...state,  errorMessage: action.payload}
+        case  SEARCH_VALUE:
+            return {...state,   setSearchValue: action.payload}
         default:
             return state
     }

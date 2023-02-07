@@ -8,7 +8,7 @@ const Quantity = () => {
             <div className={style.quantity}>
                 <div className={style.cartBtnMinus}>
                     <button className={style.minusBtn} type="button" name="button">
-                        <img src={minusSvg}/>
+                        <img src={minusSvg} alt="plusButton"/>
                     </button>
                 </div>
                 <div className={style.cartInput}>
@@ -16,7 +16,7 @@ const Quantity = () => {
                 </div>
                 <div className={style.cartBtnPlus}>
                     <button className={style.plusBtn} type="button" name="button">
-                        <img src={plusSvg} />
+                        <img src={plusSvg} alt="minusButton"/>
                     </button>
                 </div>
             </div>

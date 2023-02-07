@@ -1,6 +1,10 @@
 .inputSearch {
     border: none;
 }
+.headerInput{
+    position: relative;
+    bottom: 3px;
+}
 
 .inputSearch:focus {
     outline: none;

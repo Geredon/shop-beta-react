@@ -5,7 +5,6 @@ import CartPrice from "./cartPrice/CartPrice";
 import CartAdd from "./cartAdd/CartAdd";
 import Favorite from "../../../catalog/components/product/productFavorite/Favorite";
 
-import s from "./cartFavorite/cartFavorute.module.css"
 const DetailedInfo = (props) => {
     return (
         <div className={style.detailedInfo}>
@@ -14,7 +13,7 @@ const DetailedInfo = (props) => {
             <div className={style.cartInfo}>
                 <CartPrice detailedInfo={props.detailedInfo}/>
                 <CartAdd/>
-                <div className={s.cartFavorite}>
+                <div className={style.cartFavorite}>
                     <Favorite/>
                 </div>
             </div>

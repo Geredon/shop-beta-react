@@ -3,20 +3,22 @@ import Favorite from "./productFavorite/Favorite";
 import ProductImg from "./productImg/ProductImg";
 import ProductTitle from "./productTitle/ProductTitle";
 import ProductPrice from "./productPrice/ProductPrice";
-import { NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import {PATH_DETAILED} from "../../../../constants/constants";
 
 const Product = (props) => {
-    let pathId =`/detailed/:id=${props.id}`
+
+    const productPath = PATH_DETAILED.replace(':id', props.id)
+
     return (
         <li className={style.product}>
-            <NavLink to={pathId}>
+            <NavLink to={productPath}>
                 <Favorite like={props.like}/>
-                <ProductImg img={props.img} />
+                <ProductImg img={props.img}/>
                 <ProductTitle title={props.name}/>
                 <ProductPrice price={props.price}/>
             </NavLink>
         </li>
     )
 }
-
 export default Product;
