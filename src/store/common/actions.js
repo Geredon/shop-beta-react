@@ -1,2 +1,2 @@
 export const ADD_ERROR_MESSAGE = "ADD_ERROR_MESSAGE";
-export const SEARCH_VALUE = "SEARCH_VALUE";
+export const SET_SEARCH_VALUE = "SET_SEARCH_VALUE";

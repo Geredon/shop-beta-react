@@ -6,6 +6,7 @@ import {addErrorMessage} from "../store/common/actionCreators";
 export const httpClient = axios.create({
     baseURL: MAIN_URL
 });
+
 httpClient.interceptors.response.use(function (response) {
     return (response);
 }, function (error) {

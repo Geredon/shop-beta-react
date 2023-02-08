@@ -6,7 +6,7 @@ import {useSelector} from "react-redux";
 
 
 const Catalog = () => {
-    const value = useSelector(state => state.common.setSearchValue)
+    const value = useSelector(state => state.common.searchValue)
     const [catalog, setCatalog] = useState([]);
 
 

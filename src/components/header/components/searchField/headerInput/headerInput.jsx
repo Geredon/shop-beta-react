@@ -1,13 +1,16 @@
 import style from "./headerInput.module.css"
-import {store} from "../../../../../store/store";
-import {searchValue} from "../../../../../store/common/actionCreators";
+import {setSearchValue} from "../../../../../store/common/actionCreators";
 import {debounce} from "../../../../../lib/debounce";
+import {useDispatch} from "react-redux";
 
 const HeaderInput = () => {
 
+    const dispatch = useDispatch()
+
     return (
         <div className={style.headerInput}>
-            <input type="text" onChange={debounce((event) => store.dispatch(searchValue(event.target.value)),300)} className={style.inputSearch} placeholder="Search products"/>
+            <input type="text" onChange={debounce((event) => dispatch(setSearchValue(event.target.value)), 300)}
+                   className={style.inputSearch} placeholder="Search products"/>
         </div>
     )
 }

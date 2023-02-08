@@ -1,4 +1,4 @@
-import {ADD_ERROR_MESSAGE, SEARCH_VALUE} from "./actions";
+import {ADD_ERROR_MESSAGE, SET_SEARCH_VALUE} from "./actions";
 
 export function addErrorMessage(payload) {
     return {
@@ -7,10 +7,10 @@ export function addErrorMessage(payload) {
     }
 }
 
-export function searchValue(payload) {
+export function setSearchValue(payload) {
 
     return {
-        type: SEARCH_VALUE,
+        type: SET_SEARCH_VALUE,
         payload
     }
 }

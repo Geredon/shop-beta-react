@@ -1,13 +1,13 @@
 import style from './showModal.module.css'
 import imgClose from "./close.png"
-import {useSelector} from "react-redux";
-import {store} from "../../store/store";
+import {useDispatch, useSelector} from "react-redux";
 import {addErrorMessage} from "../../store/common/actionCreators";
 
 const ShowModal = () => {
     const message = useSelector(state => state.common.errorMessage)
+    const dispatch = useDispatch()
     function close() {
-        store.dispatch(addErrorMessage(null))
+        dispatch(addErrorMessage(null))
     }
 
     return (
