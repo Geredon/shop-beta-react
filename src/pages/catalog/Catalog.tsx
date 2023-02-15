@@ -1,13 +1,15 @@
 import style from "./Catalog.module.css"
 import Product from "./components/product/Product";
 import {useEffect, useState} from "react";
-import {catalogData} from "../../api/api";
-import {useSelector} from "react-redux";
+import {catalogData, ContentType} from "../../api/api";
+import {useAppSelector} from "../../store/store";
+
+
 
 
 const Catalog = () => {
-    const value = useSelector(state => state.common.searchValue)
-    const [catalog, setCatalog] = useState([]);
+    const value = useAppSelector(state => state.common.searchValue)
+    const [catalog, setCatalog] = useState<[] | ContentType[]>([]);
 
 
 

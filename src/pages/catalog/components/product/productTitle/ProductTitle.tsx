@@ -1,6 +1,11 @@
 
 import style from "./ProductTitle.module.css"
-const ProductTitle = (props) => {
+import {FC} from "react";
+
+type PropsTitleType = {
+    title: string
+}
+const ProductTitle:FC<PropsTitleType> = (props) => {
     return(
         <p className={style.productTitle}>
             {props.title}

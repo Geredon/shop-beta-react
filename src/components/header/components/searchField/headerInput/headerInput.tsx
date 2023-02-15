@@ -9,7 +9,7 @@ const HeaderInput = () => {
 
     return (
         <div className={style.headerInput}>
-            <input type="text" onChange={debounce((event) => dispatch(setSearchValue(event.target.value)), 300)}
+            <input type="text" onChange={debounce((event:any) => dispatch(setSearchValue(event.target.value)), 300)}
                    className={style.inputSearch} placeholder="Search products"/>
         </div>
     )

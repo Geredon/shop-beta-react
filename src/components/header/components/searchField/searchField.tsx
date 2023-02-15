@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderInput from "./headerInput/headerInput";
 import style from "./searchField.module.css"
-import { ReactComponent as SearchSvg} from "./searchIcon.svg";
+import {ReactComponent as SearchSvg} from "./searchIcon.svg";
 
 const SearchField = () => {
     return (
@@ -13,5 +13,4 @@ const SearchField = () => {
         </div>
     )
 }
-
 export default SearchField;

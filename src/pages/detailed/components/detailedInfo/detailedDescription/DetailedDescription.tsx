@@ -1,11 +1,15 @@
 import style from "./DetailedDesctiption.module.css"
+import {FC} from "react";
 
+type DetailsType = {
+    details?: string
+}
 
-const DetailedDescription = (props) => {
+const DetailedDescription: FC<DetailsType> = (props) => {
     return (
         <div className={style.detailedDescription}>
             <h5>Details</h5>
-            <p>{props.detailedInfo?.details}</p>
+            <p>{props?.details}</p>
         </div>
     )
 };

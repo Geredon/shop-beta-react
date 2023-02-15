@@ -1,6 +1,15 @@
 
 import style from "./ProductPrice.module.css"
-const ProductPrice = (props) => {
+import {FC} from "react";
+
+export type PropsPriceType = {
+    price: {
+        value: number
+        currency: string
+    }
+}
+
+const ProductPrice:FC<PropsPriceType> = (props) => {
     const price = Math.floor(props.price.value);
     return(
         <p className={style.productPrice}>

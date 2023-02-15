@@ -2,11 +2,27 @@ import style from "./Product.module.css"
 import Favorite from "./productFavorite/Favorite";
 import ProductImg from "./productImg/ProductImg";
 import ProductTitle from "./productTitle/ProductTitle";
-import ProductPrice from "./productPrice/ProductPrice";
+import ProductPrice, {PropsPriceType} from "./productPrice/ProductPrice";
 import {NavLink} from "react-router-dom";
 import {PATH_DETAILED} from "../../../../constants/constants";
+import {FC} from "react";
 
-const Product = (props) => {
+
+type PropsProductType = {
+    id: string
+    like: boolean
+    img: {
+        path:string
+        alt:string
+    }
+    name:string
+    price: {
+        value: number
+        currency:string
+    }
+}
+
+const Product:FC<PropsProductType> = (props) => {
 
     const productPath = PATH_DETAILED.replace(':id', props.id)
 
