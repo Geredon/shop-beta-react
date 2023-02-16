@@ -1,21 +1,15 @@
 import style from "./DetailedImg.module.css"
 import {MAIN_URL} from "../../../../constants/constants";
+import {PropsImgType} from "../../../catalog/components/product/productImg/ProductImg";
 
 
-export type PropsImgDetailedType = {
-    pictureImg?: {
-        path: string
-        alt: string
-    }
-}
 
-const DetailedImg = ({ pictureImg }: PropsImgDetailedType) => {
-    const path = `${MAIN_URL}${pictureImg?.path}`
-    const altImg = pictureImg?.alt
+const DetailedImg = ({ path, alt }: PropsImgType) => {
+    const pathImg = `${MAIN_URL}${path}`
 
     return (
         <div className={style.detailedProductImg}>
-            <img src={path} alt={altImg}/>
+            <img src={pathImg} alt={alt}/>
         </div>
     )
 };

@@ -3,12 +3,12 @@ import style from "./ProductTitle.module.css"
 import {FC} from "react";
 
 type PropsTitleType = {
-    title: string
+    name: string
 }
-const ProductTitle:FC<PropsTitleType> = (props) => {
+const ProductTitle:FC<PropsTitleType> = ({name}) => {
     return(
         <p className={style.productTitle}>
-            {props.title}
+            {name}
         </p>
     )
 }

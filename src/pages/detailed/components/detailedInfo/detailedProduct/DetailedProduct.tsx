@@ -1,18 +1,15 @@
 import style from "./DetailedProduct.module.css"
-import {FC} from "react";
+import {TDetailed} from "../../../../../api/api";
 
-type DetailedDescriptionType = {
-    detailedDescription?: string
-    detailedInfo?: string
-    detailedName?: string
 
-}
+type DetailedDescriptionType = Pick<TDetailed, "description" | "name" | "info">
 
-const DetailedProduct: FC<DetailedDescriptionType> = (props) => {
+
+const DetailedProduct = ({description, info, name}: DetailedDescriptionType) => {
     return (
         <div className={style.detailedProduct}>
-            <h3 className={style.detailedName}>{props?.detailedName}</h3>
-            <p>{props?.detailedDescription}{props?.detailedInfo}</p>
+            <h3 className={style.detailedName}>{name}</h3>
+            <p>{description}{info}</p>
         </div>
     )
 };

@@ -3,15 +3,15 @@ import {httpClient} from "./httpClient";
 
 
 export type TCatalogData = {
-        id?: string
-        name?: string
-        description?: string
-        like?: boolean
-        picture?: {
-            path?: string
-            alt?: string
+        id: string
+        name: string
+        description: string
+        like: boolean
+        picture: {
+            path: string
+            alt: string
         }
-        price?: {
+        price: {
             value: number
             currency: string
         }
@@ -24,8 +24,8 @@ export type TDetailed = {
         id?: string
         like?: boolean
         picture?: {
-            path: string
-            alt: string
+            path?: string
+            alt?: string
         }
         name?: string
         price?: {

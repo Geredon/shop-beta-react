@@ -1,21 +1,22 @@
 import style from "./Catalog.module.css"
 import Product from "./components/product/Product";
 import {useEffect, useState} from "react";
-import {catalogData, ContentType} from "../../api/api";
+import {catalogData, TCatalogData} from "../../api/api";
 import {useAppSelector} from "../../store/store";
+
 
 
 
 
 const Catalog = () => {
     const value = useAppSelector(state => state.common.searchValue)
-    const [catalog, setCatalog] = useState<[] | ContentType[]>([]);
+    const [catalog, setCatalog] = useState<TCatalogData[] | []>([]);
 
 
 
     useEffect(() => {
         catalogData().then((data) => {
-            setCatalog(data);
+            setCatalog(data!);
         })
     }, []);
 
@@ -24,7 +25,7 @@ const Catalog = () => {
         return item.name.toLowerCase().includes(value.toLowerCase())
     })
 
-    const productsElements = filterCatalog.map(content => <Product name={content.name} img={content.picture}
+    const productsElements = filterCatalog.map(content => <Product name={content.name} picture={content.picture}
                                                                  id={content.id} key={content.id} price={content.price}
                                                                  like={content.like}/>)
     return (

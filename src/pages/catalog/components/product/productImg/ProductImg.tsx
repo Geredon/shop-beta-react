@@ -4,19 +4,18 @@ import {MAIN_URL} from "../../../../../constants/constants";
 import {FC} from "react";
 
 export type PropsImgType = {
-    img: {
-        path:string
-        alt:string
-    }
+        path?:string
+        alt?:string
 }
 
-const ProductImg:FC<PropsImgType> = (props) => {
+const ProductImg:FC<PropsImgType> = ({path, alt}) => {
 
-    const path = `${MAIN_URL}${props?.img?.path}`
+    const pathImg = `${MAIN_URL}${path}`
+
     return(
         <div className={style.productImg}>
             <div >
-                <img src={path} alt={props.img.alt}/>
+                <img src={pathImg} alt={alt}/>
             </div>
         </div>
     )

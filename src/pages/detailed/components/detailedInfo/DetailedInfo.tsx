@@ -5,33 +5,16 @@ import CartPrice from "./cartPrice/CartPrice";
 import CartAdd from "./cartAdd/CartAdd";
 import Favorite from "../../../catalog/components/product/productFavorite/Favorite";
 import {FC} from "react";
+import {TDetailed} from "../../../../api/api";
 
-export type TDetailedInfo = {
-   content: {
-       id?: string
-       like?: boolean
-       picture?: {
-           path: string
-           alt: string
-       }
-       name?: string
-       price?: {
-           value: number
-           currency: string
-       }
-       description?: string
-       info?: string
-       details?: string
-   }
-}
 
-const DetailedInfo:FC<TDetailedInfo> = (props) => {
+const DetailedInfo:FC<TDetailed> = ({details,description,info,name,price}) => {
     return (
         <div className={style.detailedInfo}>
-            <DetailedProduct detailedDescription={props?.content?.description} detailedInfo={props?.content?.info} detailedName={props?.content?.name}/>
-            <DetailedDescription details={props?.content?.details}/>
+            <DetailedProduct description={description} info={info} name={name}/>
+            <DetailedDescription details={details}/>
             <div className={style.cartInfo}>
-                <CartPrice price={props?.content?.price}/>
+                <CartPrice value={price?.value} currency={price?.currency}/>
                 <CartAdd/>
                 <div className={style.cartFavorite}>
                     <Favorite  like/>

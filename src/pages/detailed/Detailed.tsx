@@ -8,22 +8,7 @@ import {useParams} from "react-router-dom";
 
 
 const Detailed = () => {
-    const [detailed, setDetailed] = useState<TDetailed>({
-            id: "",
-            like: true,
-             picture: {
-                path: "0",
-                alt: "",
-             },
-            name: "",
-            price: {
-                value: 0,
-                currency: "",
-            },
-            description: "",
-            info: "",
-            details: "",
-    });
+    const [detailed, setDetailed] = useState<TDetailed | null>()
 
     const {id} = useParams()
 
@@ -35,8 +20,8 @@ const Detailed = () => {
 
     return (
         <div className={style.detailedWrapper}>
-            <DetailedImg pictureImg={detailed?.picture}/>
-            <DetailedInfo  content={detailed}/>
+            <DetailedImg path={detailed?.picture?.path} alt={detailed?.picture?.alt}/>
+            <DetailedInfo  description={detailed?.description} info={detailed?.info} name={detailed?.name} details={detailed?.details} price={detailed?.price}/>
         </div>
     )
 }

@@ -2,16 +2,13 @@ import style from "./CartPrice.module.css"
 import {FC} from "react";
 
 type PriceType = {
-    price?: {
-        currency: string
-        value: number
-    }
+        currency?: string
+        value?: number
 }
 
-
-const CartPrice: FC<PriceType> = (props) => {
+const CartPrice: FC<PriceType> = ({currency, value}) => {
     return (
-        <div className={style.cartPrice}><p>{props.price?.currency}{props.price?.value}</p>
+        <div className={style.cartPrice}><p>{currency}{value}</p>
         </div>
     )
 };
