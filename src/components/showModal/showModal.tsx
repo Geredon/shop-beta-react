@@ -2,10 +2,12 @@ import style from './showModal.module.css'
 import imgClose from "./close.png"
 import {addErrorMessage} from "../../store/common/actionCreators";
 import {useAppDispatch, useAppSelector} from "../../store/store";
+import {Button} from "@mui/material";
 
 const ShowModal = () => {
     const message = useAppSelector(state => state.common.errorMessage)
     const dispatch = useAppDispatch()
+
     function close() {
         dispatch(addErrorMessage(null!))
     }
@@ -22,7 +24,19 @@ const ShowModal = () => {
                         {message}
                     </div>
                     <div className={style.popupCloseBtn}>
-                        <button onClick={close} className={style.popupClose}>Ок</button>
+                        <Button onClick={close} variant="contained"
+                                sx={{
+                                    width: "72px",
+                                    color: "black",
+                                    border: "none",
+                                    borderRadius: "5px",
+                                    backgroundColor: "#eb9d45",
+                                    '&:hover': {
+                                        backgroundColor: '#e7b377',
+                                    },
+                                }}>
+                            Ок
+                        </Button>
                     </div>
                 </div>
             </div>
@@ -30,3 +44,4 @@ const ShowModal = () => {
     )
 }
 export default ShowModal;
+

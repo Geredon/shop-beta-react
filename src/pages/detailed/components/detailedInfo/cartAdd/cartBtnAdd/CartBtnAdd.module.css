@@ -6,7 +6,8 @@
     background: var(--orange);
     border: none;
     border-radius: 10px;
-    cursor: pointer;
+    text-transform: none;
+    font-family: sans-serif;
 }
 
 .cartBtnAdd > button:hover {

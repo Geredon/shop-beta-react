@@ -63,16 +63,3 @@
     display: flex;
     justify-content: end;
 }
-
-.popupClose {
-    width: 64px;
-    height: 28px;
-    border: none;
-    border-radius: 5px;
-    background-color: #eb9d45;
-    cursor: pointer;
-}
-
-.popupClose:hover {
-    background-color: #e7b377;
-}
