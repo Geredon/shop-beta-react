@@ -1,21 +1,8 @@
 .cartBtnAdd > button {
-    width: 160px;
-    height: 40px;
-    font-size: 24px;
-    color: #ffffff;
-    background: var(--orange);
-    border: none;
-    border-radius: 10px;
-    text-transform: none;
-    font-family: sans-serif;
+
 }
 
 .cartBtnAdd > button:hover {
     background: #E99330;
 }
 
-@media screen and (max-width: 525px) {
-    .cartBtnAdd {
-        order: 4;
-    }
-}
