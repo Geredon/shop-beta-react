@@ -1,0 +1,29 @@
+
+
+.productFavorite {
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+}
+
+.productFavoriteTwo {
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+}
+
+.productFavorite > svg *{
+    stroke-width: 9%;
+    stroke: #959595;
+}
+
+.productFavorite > svg *:hover {
+    fill: var(--orange);
+    stroke: none;
+}
+
+.productFavoriteShow > svg *{
+    fill: var(--orange);
+    stroke: none;
+}
+

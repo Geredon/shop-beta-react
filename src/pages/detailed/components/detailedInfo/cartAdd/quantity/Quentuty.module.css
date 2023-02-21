@@ -1,0 +1,51 @@
+.quantity {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+}
+
+.minusBtn, .plusBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background: #ffffff;
+    border: 1px solid #323232;
+    cursor: pointer;
+}
+
+.cartInput {
+    border-top: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+}
+
+.cartInput > input {
+    text-align: center;
+    height: 38px;
+    width: 100px;
+    border: none;
+    outline: none;
+
+}
+
+@media screen and (max-width: 525px) {
+
+    .quantity {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 475px) {
+
+    .quantity {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .cartInput > input {
+        width: 60px;
+    }
+}

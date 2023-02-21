@@ -1,0 +1,14 @@
+h5 {
+    padding-bottom: 16px;
+    font-size: 18px;
+}
+
+.detailedDescription {
+    padding-bottom: 24px;
+}
+
+@media screen and (max-width: 525px) {
+    .detailedDescription {
+        padding-bottom: 16px;
+    }
+}
